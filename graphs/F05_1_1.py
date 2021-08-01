@@ -42,13 +42,7 @@ def update_figure(n_intervals):
         df.sort_values(by='new_v_datetime', inplace=True)
         df.dropna(inplace=True)
 
-    # TODO: remove this when deploying!!!
-    # !!! Only for debug !!!
-    print('F05-1-1#####################')
-    print(n_intervals)
-    print(df.columns)
-    print(df.empty)
-    print('##########################')
+    data.debug_info(__name__, n_intervals, df.columns, df.empty)
 
     # Get URL parameters
     search_dic = data.get_search_dic()

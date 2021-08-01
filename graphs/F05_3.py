@@ -33,13 +33,7 @@ def update_figure(n_intervals):
     if df.empty:
         df = data.get_fig_table(table_name='fm_fig_f05_3')
 
-    # TODO: remove this when deploying!!!
-    # !!! Only for debug !!!
-    print('F05-3#####################')
-    print(n_intervals)
-    print(df.columns)
-    print(df.empty)
-    print('##########################')
+    data.debug_info(__name__, n_intervals, df.columns, df.empty)
 
     # Prevent modify original data
     df_draw = df.copy()
