@@ -78,7 +78,7 @@ def update_figure(n_intervals):
             )
         ],
         'layout': go.Layout(
-            title='Wind Speed and Direction Diagram',
+            title='Current Direction & Speed',
             font_size=16,
             legend_font_size=16,
             polar_radialaxis_tickformat=',.0%',

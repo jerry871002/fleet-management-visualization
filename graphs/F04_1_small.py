@@ -1,5 +1,5 @@
 """
-F04-1: Propeller Performance
+F04-1-small: Propeller Performance(Small)
 
 Parameters:
     oldstartdatetime
