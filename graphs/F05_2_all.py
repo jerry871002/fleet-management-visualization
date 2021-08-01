@@ -53,9 +53,12 @@ def update_figure(n_intervals):
 
     # Load data from DB when first load the page
     if df.empty:
-        df = data.get_fig_dataframe(fig_no='F05-1',
-                                    fig_dataset=range(0, 11),
-                                    cols=cols)
+        # df = data.get_fig_dataframe(fig_no='F05-1',
+        #                             fig_dataset=range(0, 11),
+        #                             cols=cols)
+
+        df = data.read_csv('fig_data/F05_2_all.csv')
+
         df['new_v_datetime'] = data.to_datetime(df['new_v_datetime'])
         df.sort_values(by='new_v_datetime', inplace=True)
         df.dropna(inplace=True)

@@ -42,9 +42,9 @@ def update_figure(n_intervals):
 
     # Load data from DB when first load the page
     if df.empty:
-        df = data.get_fig_dataframe(fig_no='F03-1',
-                                    fig_dataset=[1, 2],
-                                    cols=cols)
+        # df = data.get_fig_dataframe(fig_no='F03-1',
+        #                             fig_dataset=[1, 2],
+        #                             cols=cols)
 
         df = data.read_csv('fig_data/F03_1.csv')
 

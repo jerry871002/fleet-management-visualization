@@ -40,9 +40,12 @@ def update_figure(n_intervals):
 
     # Load data from DB when first load the page
     if df.empty:
-        df = data.get_fig_dataframe(fig_no='F04-2',
-                                    fig_dataset=[1, 2],
-                                    cols=cols)
+        # df = data.get_fig_dataframe(fig_no='F04-2',
+        #                             fig_dataset=[1, 2],
+        #                             cols=cols)
+
+        df = data.read_csv('fig_data/F04_2.csv')
+        
         df.dropna(inplace=True)
 
     data.debug_info(__name__, n_intervals, df.columns, df.empty)

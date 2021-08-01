@@ -46,7 +46,8 @@ def update_figure(n_intervals):
 
     # Load data from DB when first load the page
     if df.empty:
-        df = data.get_fig_table(table_name='fm_fig_f05_3')
+        # df = data.get_fig_table(table_name='fm_fig_f05_3')
+        df = data.read_csv('fig_data/F05_3.csv')
 
     data.debug_info(__name__, n_intervals, df.columns, df.empty)
 

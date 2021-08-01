@@ -45,7 +45,10 @@ def update_figure(n_intervals):
 
     # Load data from DB when first load the page
     if df.empty:
-        df = data.get_corr_data(cols)
+        # df = data.get_corr_data(cols)
+
+        df = data.read_csv('fig_data/F04_3.csv')
+
         df['tc_direction_index'] = df['tc_direction_index'].map(data.directions_dict.get)
         df['tw_direction_index'] = df['tw_direction_index'].map(data.directions_dict.get)
         df['tc_head_beam_tail'] = df['tc_head_beam_tail'].map(data.hbt_dict.get)
