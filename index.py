@@ -65,13 +65,8 @@ def display_page(pathname, search):
         return F05_3_all.layout
     elif pathname == '/graphs/F05-3-all-small':
         return F05_3_all_small.layout
-    elif pathname == '/graphs/F06-2':
-        return F06_2
     else:
         return 'Sorry we don\'t have this page.'
-
-def get_search_dic():
-    return search_dic
 
 if __name__ == '__main__':
     app.run_server(debug=True)
